@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<!-- the firs link is for web applicaion on browser and the second if=s for mobile apps, so you can resuse the developed logic -->
+    <script crossorigin src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <script type="text/babel">
+        const Produtcs = ()=>{
+            function handleClick(Event){
+                alert(`comprou ${Event.target.innerText}`)
+            }
+
+            return(
+                <div>
+                    <button onClick={handleClick}>Cheap</button>
+                </div>
+            )
+        }
+        const Chart = ()=>{
+            const  [count, setCount] = React.useState(0)
+            return(
+                <div>
+                    <button onClick={()=>setCount(count+1)}>
+                        Comprar: {count}
+                    </button>
+                    <p>total {count}</p>
+                    <p>preço {count*3.8}</p>
+                </div>
+            )
+        }
+
+
+        const Button = () => <button>Buy</button>
+        const App = () =>{ 
+            return(
+            <div>
+                <div>
+                    <p>Hello and welcome</p>
+                    <Button />
+                    <Button />
+                    <Produtcs />
+                
+                </div>
+                <Chart />
+            </div>
+        )}
+        ReactDOM.render(<App />, document.getElementById("app"))
+    </script>
+</body>
+</html>

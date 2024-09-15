@@ -1,0 +1,8 @@
+{
+    "files.associations": {"*.js": "javascriptreact"},
+    "editor.formatOnSave": true,
+    "editor.tabCompletion": "on",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "prettier.singleQuote": true
+}
